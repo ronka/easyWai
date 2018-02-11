@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="he">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="easywai.css">
+</head>
+<body>
+  <div id="main">
+    גדלגמדלח
+    <a href="#">לינק דוגמא</a>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="easywai.js"></script>
+<script>
+  $(document).ready(function(){
+    $.easyWai({
+      position: {
+        top: '60px',
+        side: 'left',
+      },
+      features:{
+        monochrome: false,
+      },
+      skipContent: '#main',
+      accStatement: {
+        url: '#'
+      }
+    });
+  })
+</script>
+</body>
+</html>

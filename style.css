@@ -1,0 +1,12 @@
+body {
+    background: #ccc;
+    direction: rtl;
+}
+
+#main{
+    width: 600px;
+    margin:0 auto;
+}
+*:focus,{
+	outline:dashed 2px #211572;
+}

@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="he">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ACE - דובל'ה</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="webfont/stylesheet.css">
+	<link rel="stylesheet" href="easyjetform/jetform.css">
+	<link rel="stylesheet" href="easywai/easywai.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="logo"><img src="images/logo.png" alt="ACE"></div>
+			<h1>ארונות דובל'ה במחיר מטורף<br>רק לקונים באינטרנט!</h1>
+		</div><!-- #header -->
+		<div id="right-side">
+			<div class="closet" id="closet-1">
+				<span class="warranty">5 שנות אחריות</span>
+				<div class="info">
+					<div class="price-wrapper">
+						ארון רותם<br>
+						<span class="price"><span class="prefix">₪</span>999<span class="sufix">90</span></span>
+					</div>
+					<a href="#" class="more-info">
+						למידע
+						נוסף >>
+					</a>
+					<div class="popup">
+						<div class="close">X</div>
+						<ul>
+							<li>ארון פתיחה איכותי תוצרת ישראל</li>
+							<li>הארון כולל 4 דלתות, 3 מגירות, 5 מדפים ומוט תליה</li>
+							<li>מידות חיצוניות:<br> ג' 240 ס"מ ר' 160 ס"מ, ע' 56 ס"מ</li>
+							<li>מחיר הובלה והרכבה החל מ340₪ לאזורים מרוחקים בתוספת תשלום</li>
+						</ul>
+					</div><!-- .popup -->
+				</div><!-- .info -->
+			</div><!-- #closet-1 -->
+			<div class="closet" id="closet-2">
+				<span class="warranty">5 שנות אחריות</span>
+				<span class="width-info">רוחב <br> 1.81 ס"מ</span>
+				<div class="info">
+					<div class="price-wrapper">
+						ארון מיקה<br>
+						<span class="price"><span class="prefix">₪</span>1,299<span class="sufix">90</span></span>
+					</div>
+					<a href="#" class="more-info">
+						למידע
+						נוסף >>
+					</a>
+					<div class="popup">
+						<div class="close">X</div>
+						<ul>
+							<li> ארון הזזה איכותי עם דלתות מלמין תוצרת גרמניה</li>
+							<li>הארון כולל 5 מדפים רחבים ומוט תליה</li>
+							<li>מידות חיצוניות:<br> ג' 229 ס"מ  ר' 181 ס"מ  ע' 61 ס״מ</li>
+							<li>מחיר הובלה והרכבה החל מ390₪ לאזורים מרוחקים בתוספת תשלום</li>
+						</ul>
+					</div><!-- .popup -->
+				</div><!-- .info -->
+			</div><!-- #closet-2 -->
+		</div><!-- #right-side -->
+		<div id="left-side">
+			<div id="left-side-content">
+				<img src="images/logo-dovale.png" alt="דובל''ה" id="logo-dovale">
+				<h2>מאות אלפי לקוחות מרוצים, כבר 40 שנה!</h2>
+				<form id="jetform">
+				
+					<h3>מלאו את הפרטים ונציג מקצועי של דובל'ה  יחזור אליכם</h3>
+					<div>
+						<label for="jf_txt_1" class="sr-only">שם מלא</label>
+						<input data-name="שם מלא" type="text" placeholder="שם מלא:" id="jf_txt_1" required name="jf_txt_1">
+					</div>
+					<div>
+						<label for="jf_txt_2" class="sr-only">טלפון</label>
+						<input data-name="טלפון" type="tel" placeholder="טלפון:" id="jf_txt_2" required name="jf_txt_2">
+					</div>
+					<h4>איזה ארון מעניין אותך?</h4>
+					<div class="radio" id="radio-1">
+						<label>
+							<input type="radio" name="jf_rdb_3" data-error="יש לבחור ארון" id="optionsRadios1" value="ארון מיקה" required>
+							ארון מיקה
+						</label>
+					</div>
+					<div class="radio" id="radio-2">
+						<label>
+							<input type="radio" name="jf_rdb_3" data-error="יש לבחור ארון" id="optionsRadios2" value="ארון רותם" required>
+							ארון רותם
+						</label>
+					</div>
+					<button type="submit" id="jf_submit">צור קשר >></button>
+					<div id="jf_err"></div>
+				</form><!-- #form-wrapper -->
+				<div id="thanks">
+					<p>תודה,<br> הפרטים התקבלו בהצלחה</p>
+				</div>
+			</div><!-- #left-side-content -->
+		</div><!-- #left-side -->
+	</div>
+<img id="tbwa" src="images/tbwa.png">
+<script src="easyjetform/jetform.js"></script>
+<script src="scripts.js"></script>
+<script src="easywai/easywai.js"></script>
+<script>
+  $(document).ready(function(){
+    $.easyWai({
+      position: {
+        top: '60px',
+        side: 'right',
+      },
+      features:{
+        monochrome: false,
+      },
+      skipContent: '#main',
+      accStatement: {
+        url: '#'
+      }
+    });
+  })
+</script>
+</script>
+</body>
+</html>

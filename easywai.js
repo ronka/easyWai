@@ -140,9 +140,6 @@ easyWai.prototype.methods = {
     );
 
     $body.find('.easywai_feature button').removeClass('easywai_feature--active');
-
-    $this._settings.fontSize = 100;
-    document.body.style.fontSize = $this._settings.fontSize + '%';
   },
   increaseFont: function(){
     if ($this._settings.fontSize >= 200) {

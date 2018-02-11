@@ -2,11 +2,20 @@
 
 @import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
 
-#easywai.easywai--left[aria-expanded="true"]{left:10px;}
-#easywai.easywai--left[aria-expanded="false"]{left: -220px;right: auto;}
-
-#easywai.easywai--right[aria-expanded="true"]{right: 10px;}
-#easywai.easywai--right[aria-expanded="false"]{right:-220px;left:auto;}
+body #easywai{
+  transition: all .25s ease-in;
+}
+#easywai{
+	width: 280px;
+	position: fixed;
+	direction: rtl;
+	z-index: 999;
+	font-size: 14px;
+	font-weight: bold;
+}
+#easywai > *{
+  box-sizing: border-box;
+}
 
 #easywai__btn {
   background: #003459;
@@ -31,19 +40,45 @@
 #easywai.easywai--left #easywai__btn{right: -10px;}
 #easywai.easywai--right #easywai__btn{left: -10px;}
 
-#easywai{
-	width: 280px;
-	position: fixed;
-	direction: rtl;
-	z-index: 999;
-	font-size: 14px;
-	font-weight: bold;
-	transition: all ease-in .25s;
+
+
+/* slide settings */
+
+#easywai.easywai--left[aria-expanded="true"]{left:20px;width: 280px;}
+#easywai.easywai--left[aria-expanded="false"]{left: -220px;right: auto;}
+
+#easywai.easywai--right[aria-expanded="true"]{right: 20px;width: 280px;}
+#easywai.easywai--right[aria-expanded="false"]{right:-220px;left:auto;}
+
+/* fade settings */
+
+body.easyWai-fade #easyWai{
+  width: 0;
 }
 
-#easywai > *{
-  box-sizing: border-box;
+body.easyWai-fade #easywai.easywai--left[aria-expanded="false"]{left: 20px;}
+body.easyWai-fade #easywai.easywai--right[aria-expanded="false"]{right: 20px;}
+
+body.easyWai-fade #easywai[aria-expanded="false"] #easywai__inner{
+	opacity: 0;
+	visibility: hidden;
+	z-index: -111;
+
 }
+body.easyWai-fade #easywai[aria-expanded="true"] #easywai__inner{
+	opacity: 1;
+	visibility: visible;
+	z-index: 999;
+}
+
+body.easyWai-fade #easywai.easywai--right[aria-expanded="false"] #easywai__inner{}
+body.easyWai-fade #easywai.easywai--right[aria-expanded="true"] #easywai__inner{}
+
+body.easyWai-fade #easywai.easywai--left #easywai__btn{right: auto;left: -10px;}
+body.easyWai-fade #easywai.easywai--right #easywai__btn{left: auto;right: -10px;}
+
+body.easyWai-fade #easywai.easywai--left #easywai__inner{margin: 0 0 0 60px;}
+body.easyWai-fade #easywai.easywai--right #easywai__inner{margin: 0 60px 0 0;}
 
 #easywai__features{
 	list-style: none;
@@ -57,6 +92,7 @@
 	border: 1px solid #003459;
 	background: rgba(255,255,255,0.95);
 	font-family: 'Arial';
+	transition: opacity .3s ease-in;
 }
 #easywai.easywai--right #easywai__inner{
 	margin: 0 0 0 60px;
@@ -136,6 +172,7 @@
 	font-weight: bold;
 	text-decoration: none;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+	z-index: 99999;
 }
 
 #easywai-skip-content:active,

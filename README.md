@@ -22,6 +22,7 @@ Add the css file and the js file, requires jquery installed
 #### How to use
 ```javascript
 $.easyWai({
+    fade: true,
     position: {
         top: '60px',
         side: 'left',
@@ -47,3 +48,4 @@ accStatement:text | Accessibility statment button text, default "הצהרת נג
 accStatement:url | Accessibility statment url link, set false to hide
 customIcon | pass html element to replace the icon, default font-awesome icon
 skipContent | css selector to main content, default false
+fade | if set to true, the menu will apper in a fade, default false

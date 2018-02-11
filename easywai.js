@@ -9,6 +9,7 @@ var easyWai = function(options) {
       side: 'right',
       top: '20px',
     },
+    fade: false,
     features: {
       increaseFont: 'הגדלת פונט',
       decreaseFont: 'הקטנת פונט',
@@ -49,12 +50,18 @@ easyWai.prototype = {
     this.buildBtn();
 
     this._template += '<div id="easywai__inner">';
+
     this.buildMenu();
     this.buildAccStatement();
+
     this._template += '</div>'; // end easywai__inner
 
-    this._template += '</div>';
+    this._template += '</div>'; // end easywai
+
     $body.prepend(this._template);
+    if(!!this._options.fade){
+      $body.addClass('easyWai-body easyWai-fade');
+    }
     $body.addClass('easyWai-body');
 
     this.setStyling();

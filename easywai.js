@@ -149,9 +149,6 @@ easyWai.prototype.methods = {
     $body.removeClass('easywai-font-size-' + $this._settings.fontSize);
     $this._settings.fontSize += 10;
     $body.addClass('easywai-font-size-' + $this._settings.fontSize);
-
-    document.body.style.fontSize = $this._settings.fontSize + '%';
-
   },
   decreaseFont: function(){
     if ($this._settings.fontSize <= 100) {
@@ -161,8 +158,6 @@ easyWai.prototype.methods = {
     $body.removeClass('easywai-font-size-' + $this._settings.fontSize);
     $this._settings.fontSize -= 10;
     $body.addClass('easywai-font-size-' + $this._settings.fontSize);
-
-    document.body.style.fontSize = $this._settings.fontSize + '%';
   },
   readableFont: function(){
     if( $body.hasClass('easywai-readable-font') ){

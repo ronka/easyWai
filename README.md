@@ -1,4 +1,4 @@
-# easyWai - v1.0.0 (beta)
+# easyWai - v1.0.0 (beta) - [Demo](https://ronka.github.io/easyWai/).
 
 #### Features
 - Increase Font

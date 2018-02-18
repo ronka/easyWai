@@ -1,4 +1,4 @@
-# easyWai - v1.0.0 (beta) - [Demo](https://ronka.github.io/easyWai/).
+# easyWai - v1.1.0 - [Demo](https://ronka.github.io/easyWai/).
 
 #### Features
 - Increase Font
@@ -11,6 +11,7 @@
 - Highlight Links
 - Accessibility Statment
 - Skip Content Button
+- Save the settings choosen in cookie
 
 #### Required Files
 Add the css file and the js file, requires jquery installed
@@ -31,11 +32,18 @@ $.easyWai({
         readableFont: 'פונט מאוד קריא'
         monochrome: false,
     },
+    saveSettings: true,
     skipContent: '#main',
     accStatement: {
         url: '#'
     }
 });
+```
+
+##### How to call the methods outside of the plugin
+```javascript
+window.easyWai.methods.monochrome(); // turn monochrome mode on
+window.easyWai.methods.reset(); // reset all the settings
 ```
 
 #### Settings
@@ -49,3 +57,4 @@ accStatement:url | Accessibility statment url link, set false to hide
 customIcon | pass html element to replace the icon, default font-awesome icon
 skipContent | css selector to main content, default false
 fade | if set to true, the menu will apper in a fade, default false
+saveSettings | if set to true, user settings will be saved in a cookie for later visits

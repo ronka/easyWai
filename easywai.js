@@ -138,8 +138,6 @@ easyWai.prototype = {
   setStyling: function(){
     this._btn = document.getElementById('easywai__btn');
     this._element = document.getElementById('easywai');
-    var btnWidth = this._btn.offsetWidth;
-    var swapedSide;
 
     this._element.style['top'] = this._options.position.top;
   },

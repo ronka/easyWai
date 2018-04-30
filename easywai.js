@@ -285,7 +285,7 @@ easyWai.prototype.methods = {
 }
 
 easyWai.prototype.helpers = {
-  setCookie(name, value, days) {
+  setCookie: function(name, value, days) {
     if (days) {
       var date = new Date();
       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -294,7 +294,7 @@ easyWai.prototype.helpers = {
     else var expires = "";
     document.cookie = name + "=" + value + expires + "; path=/";
   },
-  getCookie(name) {
+  getCookie: function(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
@@ -304,7 +304,7 @@ easyWai.prototype.helpers = {
     }
     return null;
   },
-  eraseCookie(name) {
+  eraseCookie: function(name) {
     $this.helpers.setCookie(name, "", -1);
   }
 }
